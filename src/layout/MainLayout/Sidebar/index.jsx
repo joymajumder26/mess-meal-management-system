@@ -16,7 +16,7 @@ import { drawerWidth } from '../../../store/constant';
 
 // ==============================|| SIDEBAR DRAWER ||============================== //
 
-const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
+function Sidebar({ drawerOpen, drawerToggle, window }) {
   const theme = useTheme();
   const matchUpMd = useMediaQuery(theme.breakpoints.up('md'));
 
@@ -37,13 +37,13 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
           }}
         >
           <MenuList />
-          <MenuCard />
+          {/* <MenuCard /> */}
         </PerfectScrollbar>
       </BrowserView>
       <MobileView>
         <Box sx={{ px: 2 }}>
           <MenuList />
-          <MenuCard />
+          {/* <MenuCard /> */}
         </Box>
       </MobileView>
     </>
@@ -82,7 +82,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
       </Drawer>
     </Box>
   );
-};
+}
 
 Sidebar.propTypes = {
   drawerOpen: PropTypes.bool,
